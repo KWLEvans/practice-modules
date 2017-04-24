@@ -1,0 +1,6 @@
+name = Trash Shop
+description = A place to shop if you're a raccoon.
+package = Practice Modules
+core = 7.x
+files[] = trash_shop.module, raccoon.jpg
+stylesheets[all][] = trash_shop_styles.css

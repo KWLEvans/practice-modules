@@ -1,0 +1,5 @@
+name = Cards To Your Friends To Say Hello To Them Because You Like Them Very Much
+description = and you're friends
+package = Practice Modules
+core = 7.x
+files[] = cards.module

@@ -1,0 +1,6 @@
+name = Pet
+description = Display information about the best pet.
+package = Practice Modules
+core = 7.x
+files[] = pet.module, tubbz.jpg
+stylesheets[all][] = pet_style.css

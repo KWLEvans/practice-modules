@@ -1,0 +1,16 @@
+<?php
+
+function pet_menu() {
+  $items = array();
+  $items['pet'] = array(
+    'title' => 'My Favorite Pet',
+    'page callback' => 'display_pet',
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+function display_pet() {
+  return "<p>This is my pet, Tubbz.</p><img id='wombat' src='sites/all/modules/pet/tubbz.jpg'>";
+}

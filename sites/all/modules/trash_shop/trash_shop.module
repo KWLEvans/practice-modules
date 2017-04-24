@@ -1,0 +1,34 @@
+<?php
+
+function trash_shop_menu() {
+    $array_of_trash = trash_array();
+    $items = array();
+    $items['trash'] = array(
+        'title' => "This is a store for trash.",
+        'page callback' => 'trash_display',
+        'page arguments' => array($array_of_trash),
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    var_dump($items);
+    return $items;
+}
+
+function trash_array() {
+    return array(
+        'rotten eggs' => '3,99 EuroRabies',
+        'half a sandwich, little mold' => '12,50 EuroRabies',
+        'cotton candy' => '1,99 EuroRabies',
+        'cheese' => '99,99 EuroRabies (because of BrekShit)',
+    );
+}
+
+function trash_display($array_of_trash) {
+    $string = '<ul>';
+    foreach ($array_of_trash as $trash => $cost) {
+        $list_item = '<li>'.$trash.'<ul><li>'.$cost.'</li></ul></li>';
+        $string .= $list_item;
+    }
+    $string .= '</ul>';
+    return $string;
+}
