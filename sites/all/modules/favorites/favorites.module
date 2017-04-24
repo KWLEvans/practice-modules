@@ -1,0 +1,29 @@
+<?php
+
+function favorites_menu() {
+    $items = array();
+    $favorites = array(
+        'movies' => array('Tron', 'Babe', 'Love Actually'),
+        'books' => array('The Bible', 'Dune', 'Everybody Poops'),
+        'songs' => array('Bohemian Rhapsody', 'All the Small Things', 'Love Train'),
+    );
+    foreach ($favorites as $type => $array) {
+        $items[$type] = array(
+            'title' => ucwords($type),
+            'page callback' => 'display_list',
+            'page arguments' => array($array),
+            'access callback' => TRUE,
+            'type' => MENU_NORMAL_ITEM,
+        );
+    }
+    return $items;
+}
+
+function display_list($list) {
+    $string = "<ul>";
+    foreach ($list as $item) {
+        $string .= "<li>" . $item . "</li>";
+    }
+    $string .= "</ul>";
+    return $string;
+}

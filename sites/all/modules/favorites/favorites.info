@@ -1,0 +1,5 @@
+name = Favorites
+description = Display your favorite movies, books, and songs.
+package = Practice Modules
+core = 7.x
+files[] = favorites.module
